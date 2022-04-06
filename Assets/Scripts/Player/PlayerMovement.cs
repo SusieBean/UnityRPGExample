@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 movementVector;
 
-    bool canMove => true;
+    bool canMove => !MapData.isEventPlaying;
 
 
     // Update is called once per frame

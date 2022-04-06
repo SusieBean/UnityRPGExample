@@ -8,6 +8,11 @@ public class MapData : MonoBehaviour
 
     [SerializeField] AudioController audioController;
     [HideInInspector]public static MapData instance;
+    /// <summary>
+    /// TODO: INSTEAD OF USING A FLAG, USE SOME OTHER WAY TO CONTROL THE SYSTEM
+    /// </summary>
+    bool _isEventPlaying = false;
+    public static bool isEventPlaying { get => instance._isEventPlaying; set { instance._isEventPlaying = value; }}
 
     private void Awake()
     {
@@ -22,4 +27,6 @@ public class MapData : MonoBehaviour
             Instantiate(audioController);
         }
     }
+
+
 }

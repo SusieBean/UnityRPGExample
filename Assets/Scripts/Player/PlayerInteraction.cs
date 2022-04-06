@@ -12,10 +12,11 @@ public class PlayerInteraction : MonoBehaviour
 
     List<NPCPhase> phases = new List<NPCPhase>();
     NPCPhase phaseToInteractWith => phases.Count > 0 ? phases[0] : null;
+    bool canInteract => !MapData.isEventPlaying;
 
     private void Update()
     {
-        if (Input.GetButton("Interact"))
+        if (Input.GetButtonDown("Interact"))
         {
             interact();
         }
@@ -23,7 +24,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void interact()
     {
-        if (phaseToInteractWith != null)
+        if (canInteract && phaseToInteractWith != null)
         {
             phaseToInteractWith.interact();
         }
