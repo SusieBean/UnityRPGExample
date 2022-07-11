@@ -1,5 +1,5 @@
 # UnityRPGExample
-Part of a project I am running for Leeds Game Development Club.
+Part of a project I am running for Game Development Club.
 I will update to include all the user guides.
 
 CREDITS:
